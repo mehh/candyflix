@@ -1,0 +1,28 @@
+<div class="flex-row cc-hero-top">
+  <div class="container">
+    <div class="cc-header">
+      <img class="cc-logo" src="images/candyflix-logo.png" alt="" />
+    </div>
+  </div>
+</div>
+<div class="cc-match-box-container">
+  <div class="container">
+    <div class="flex-row flex-justify-right">
+      <a href="/#/" class="waves-effect waves-light red darken-4 btn-large">MATCH MORE <span class="new badge">6</span></a>
+    </div>
+    <div class="flex-row">
+      <h3>My Watchlist</h3>
+    </div>
+    <div class="flex-row">
+      <ul class="collection flex-grow cc-collection">
+        <li ng-repeat="movie in watchlist track by $index" class="collection-item avatar">
+         <img ng-src="{{ movie.image }}" alt="" class="cc-small-image">
+         <span class="title">{{ movie.title }}</span>
+         <p>Rating: {{ movie.rating }} / 5 <br>
+         </p>
+         <a ng-click="remove($index)" class="secondary-content pointer"><i class="mdi-content-remove-circle-outline small red-text text-darken-4"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

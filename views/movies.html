@@ -1,0 +1,38 @@
+<div class="flex-row cc-hero-top">
+  <div class="container">
+    <div class="cc-header">
+      <img class="cc-logo" src="images/candyflix-logo.png" alt="" />
+    </div>
+  </div>
+</div>
+<div class="cc-match-box-container">
+  <div class="container">
+    <div class="flex-row flex-justify-right">
+      <a href="/#/watchlist" class="waves-effect waves-light red darken-4 btn-large">MY WATCHLIST <span class="new badge">6</span></a>
+    </div>
+    <div class="flex-row flex-justify-center">
+      <div class="card cc-card">
+        <div class="card-image cc-card-image">
+          <img class="poster" src="{{ currentMovie.image }}" alt="">
+          <span class="card-title cc-card-title">{{ currentMovie.title }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex-row flex-justify-center ">
+      <div class="cc-button-container flex-row flex-align-center">
+        <a ng-click="getMovie()" class="cc-button-x flex-row flex-justify-center flex-align-center">
+          <i class="mdi-content-clear"></i>
+        </a>
+        <a target="_blank" class="cc-button-i flex-row flex-justify-center flex-align-center">
+          <i class="mdi-content-link"></i>
+        </a>
+        <a ng-click="addToWatchlist()" class="cc-button-ticket flex-row flex-justify-center flex-align-center">
+          <i class="mdi-action-theaters"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hide-image">
+  <img src="{{ nextMovieImg() }}" />
+</div>
